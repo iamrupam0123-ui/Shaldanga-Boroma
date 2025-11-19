@@ -6,28 +6,37 @@
     <title>শ্রী শ্রী বড়কালী মাতা ঠাকুরানী, শালডাঙ্গা</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Using Kalpurush Semi-Bold (600) for the main Bengali heading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalpurush:wght@600&display=swap" rel="stylesheet">
+
     <style>
-        /* Configure the Inter font for clean body text */
+        /* Body font remains the professional 'Inter' */
         body {
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
             background-color: #fcfcfc; /* Very light background */
             color: #333;
+            /* CRITICAL FIX: Stops the page from scrolling horizontally on mobile */
+            overflow-x: hidden; 
         }
-        /* Custom font stack for titles to suggest a traditional, strong aesthetic */
-        .cultural-title {
-            font-family: 'Times New Roman', serif; 
+        
+        /* Applied ONLY to the main H1 title to use Kalpurush */
+        .main-cultural-title {
+            font-family: 'Kalpurush', 'Times New Roman', serif; 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
+        
         /* Custom scrollbar for aesthetics (using red-700) */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-thumb { background: #b91c1c; border-radius: 3px; }
 
         /* Custom aspect ratio for the main image (Portrait 3:4) */
         .aspect-3-4 {
-            /* This ensures a 4/3 height to width ratio (portrait) */
             padding-top: calc(4 / 3 * 100%); 
         }
+        
         /* Ensure images in the gallery are styled correctly */
         #gallery img {
             width: 100%;
@@ -43,8 +52,8 @@
     <!-- Header & Main Banner -->
     <header class="bg-red-700 py-10 md:py-16 shadow-2xl">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <!-- Bengali Title -->
-            <h1 class="cultural-title text-4xl sm:text-5xl md:text-6xl font-extrabold text-amber-300 tracking-tight leading-none whitespace-nowrap">
+            <!-- Bengali Title: Kalpurush Semi-Bold, whitespace-nowrap removed for responsiveness -->
+            <h1 class="main-cultural-title text-4xl sm:text-5xl md:text-6xl font-extrabold text-amber-300 tracking-tight leading-none">
                 শ্রী শ্রী বড়কালী মাতা ঠাকুরানী
             </h1>
             <!-- English Subtitle -->
@@ -54,18 +63,17 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto p-4 md:p-8">
+    <!-- Main Content Container (Uses px-4 for clean horizontal padding) -->
+    <main class="max-w-4xl mx-auto px-4 md:p-8">
 
         <!-- Maa Kali Photo Section -->
         <section id="main-photo" class="mb-12 pt-6">
             <div class="bg-white p-4 rounded-xl shadow-lg border-t-4 border-amber-500">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">The Divine Presence</h2>
                 
-                <!-- Large 3:4 Aspect Ratio Image Container -->
+                <!-- Image Container with Responsive Widths -->
                 <div class="w-full sm:w-10/12 lg:w-3/5 mx-auto rounded-lg shadow-xl overflow-hidden border-4 border-white">
                     <div class="relative w-full aspect-3-4">
-                        <!-- *** FIX 1: IMAGE URL CORRECTED TO RAW LINK INSTRUCTION *** -->
                         <img src="https://raw.githubusercontent.com/iamrupam0123-ui/Shaldanga-Boroma/main/images/IMG-20251119-WA0004.jpg" 
                              alt="The Divine Image of Maa Kali at Shaldanga Temple" 
                              class="absolute top-0 left-0 w-full h-full object-cover"
@@ -73,7 +81,7 @@
                     </div>
                 </div>
                 <p class="text-center text-sm text-gray-500 mt-3">
-                    <strong class="text-red-700">Location:</strong> Shaldanga, Rondiha, Purba Bardhaman, WB, PIN- 713420
+                    <strong class="text-red-700">INSTRUCTION:</strong> Please ensure the image link above is the **RAW** link from GitHub for it to load correctly.
                 </p>
             </div>
         </section>
@@ -87,43 +95,38 @@
             
             <div class="space-y-8">
 
-                <!-- Bengali Description - Enhanced Styling -->
+                <!-- Bengali Description -->
                 <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-red-700 transition duration-300 hover:shadow-red-500/30">
-                    <h3 class="text-xl font-bold text-red-700 mb-3 cultural-title">বিবরণ (Bengali Description)</h3>
+                    <h3 class="text-xl font-bold text-red-700 mb-3">বিবরণ (Bengali Description)</h3>
                     
-                    <h4 class="text-lg font-medium text-gray-900 mb-3 border-l-4 border-red-500 pl-3">শালডাঙ্গার হৃদস্পন্দন: আমাদের বড়মা</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 border-l-4 border-red-500 pl-3">শালডাঙ্গার হৃদস্পন্দন: আমাদের মা কালী মন্দির</h4>
                     
-                    <!-- Paragraph 1 (বাংলা) -->
                     <p class="text-gray-700 leading-relaxed mb-4">
                         শালডাঙ্গা এলাকার এই পবিত্র ভূমিতে আপনাকে স্বাগতম, যা আমাদের দিব্য জননীর পবিত্র আশ্রয়। প্রজন্মের পর প্রজন্ম ধরে আমাদের এই মন্দিরটি সম্প্রদায়িক জীবন ও অটল ভক্তির এক শান্ত, প্রাণবন্ত কেন্দ্র হিসেবে দাঁড়িয়ে আছে। এখানে, মা কালীকে কেবল সংহারের ভয়ঙ্কর দেবী রূপে নয়, বরং একজন স্নেহময়ী, রক্ষাকারী মা রূপে পূজা করা হয়, যিনি নিরলসভাবে তাঁর ভক্তদের রক্ষা করেন।
                     </p>
                     
-                    <!-- Paragraph 2 (বাংলা) -->
                     <p class="text-gray-700 leading-relaxed">
-                        এই মন্দিরটি দৈনন্দিন জীবনের ক্লান্তি থেকে মুক্তি দেয় এবং সকলকে আধ্যাত্মিক সংযোগ ও স্থানীয় ঐতিহ্যে অংশ নিতে আমন্ত্রণ জানায়। আপনি দীর্ঘদিনের বাসিন্দা হন বা নতুন দর্শনার্থী, আমরা আপনাকে আমাদের সম্প্রদায়ের আন্তরিকতা অনুভব করতে, বিশেষ করে 'কালী পূজা'-এর মতো বড় উৎসবগুলিতে, এবং এই পবিত্র দেয়ালগুলির মধ্যে একটি মুহূর্তের শান্তি খুঁজে নিতে আমন্ত্রণ জানাই।
+                        এই মন্দিরটি দৈনন্দিন জীবনের ক্লান্তি থেকে মুক্তি দেয় এবং সকলকে আধ্যাত্মিক সংযোগ ও স্থানীয় ঐতিহ্যে অংশ নিতে আমন্ত্রণ জানায়। আপনি দীর্ঘদিনের বাসিন্দা হন বা নতুন দর্শনার্থী, আমরা আপনাকে আমাদের সম্প্রদায়ের আন্তরিকতা অনুভব করতে, বিশেষ করে **কালী পূজা**-এর মতো বড় উৎসবগুলিতে, এবং এই পবিত্র দেয়ালগুলির মধ্যে একটি মুহূর্তের শান্তি খুঁজে নিতে আমন্ত্রণ জানাই।
                     </p>
                 </div>
 
-                <!-- English Description - Enhanced Styling -->
+                <!-- English Description -->
                 <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-red-700 transition duration-300 hover:shadow-red-500/30">
-                    <h3 class="text-xl font-bold text-red-700 mb-3 cultural-title">Description (English)</h3>
+                    <h3 class="text-xl font-bold text-red-700 mb-3">Description (English)</h3>
                     
-                    <h4 class="text-lg font-medium text-gray-900 mb-3 border-l-4 border-red-500 pl-3">The Heart of Shaldanga: Our Boroma</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 border-l-4 border-red-500 pl-3">The Heart of Shaldanga: Our Maa Kali Temple</h4>
                     
-                    <!-- Paragraph 1 (English) -->
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        Welcome to the sacred home of the Divine Mother in the Shaldanga area. For generations, our temple has stood as a peaceful, vibrant center for community life and unwavering devotion. Here, 'Maa Kali' is worshipped not just as the formidable goddess of destruction, but as a loving, protective mother who tirelessly guards her devotees.
+                        Welcome to the sacred home of the Divine Mother in the Shaldanga area. For generations, our temple has stood as a peaceful, vibrant center for community life and unwavering devotion. Here, **Maa Kali** is worshipped not just as the formidable goddess of destruction, but as a loving, protective mother who tirelessly guards her devotees.
                     </p>
                     
-                    <!-- Paragraph 2 (English) -->
                     <p class="text-gray-700 leading-relaxed">
-                        This temple provides a refuge from the daily grind, inviting everyone to partake in the spiritual connection and local traditions. We invite all visitors—whether you are a long-time resident or a new visitor—to experience the warmth of our community, especially during major festivals like 'Kali Puja'. Come and find a moment of spiritual peace within these blessed walls.
+                        This temple provides a refuge from the daily grind, inviting everyone to partake in the spiritual connection and local traditions. We invite all visitors—whether you are a long-time resident or a new visitor—to experience the warmth of our community, especially during major festivals like **Kali Puja**. Come and find a moment of spiritual peace within these blessed walls.
                     </p>
                 </div>
                 
             </div>
         </section>
-
 
         <!-- Media Access Section -->
         <section id="media-access" class="mb-12">
@@ -137,7 +140,6 @@
                         <h3 class="text-2xl font-bold text-red-700">High-Resolution Photos</h3>
                     </div>
                     <p class="text-gray-600 mb-4">Access and download all the yearly festival photos, ritual moments, and temple images directly via Terabox.</p>
-                    <!-- INSTRUCTION: Update the '#' href with your Terabox Photo link -->
                     <a href="#" target="_blank" class="block w-full text-center bg-red-700 text-white font-bold py-3 rounded-lg hover:bg-red-800 transition duration-200">
                         Access Photo Gallery
                     </a>
@@ -150,7 +152,6 @@
                         <h3 class="text-2xl font-bold text-amber-700">Archived Videos & Clips</h3>
                     </div>
                     <p class="text-gray-600 mb-4">View and download full videos of the annual events, documentaries, and cultural performances.</p>
-                    <!-- INSTRUCTION: Update the '#' href with your Terabox Video link -->
                     <a href="#" target="_blank" class="block w-full text-center bg-amber-600 text-gray-900 font-bold py-3 rounded-lg hover:bg-amber-700 transition duration-200">
                         Access Video Archive
                     </a>
@@ -158,15 +159,11 @@
             </div>
         </section>
 
-
         <!-- Gallery Thumbnails -->
         <section id="gallery" class="mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-red-700 pb-2">Recent Glimpses</h2>
             
-            <!-- Responsive Grid: 2 columns on mobile, 3 columns on tablet/desktop -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <!-- *** FIX 1: IMAGE URLs CORRECTED TO RAW LINK INSTRUCTIONS *** -->
-                <!-- NOTE: Raw links were inferred based on GitHub URL structure. -->
                 <img src="https://raw.githubusercontent.com/iamrupam0123-ui/Shaldanga-Boroma/main/images/IMG-20251119-WA0005.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/b91c1c/ffffff?text=Image+1';" />
                 <img src="https://raw.githubusercontent.com/iamrupam0123-ui/Shaldanga-Boroma/main/images/IMG-20251119-WA0010.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/b91c1c/ffffff?text=Image+2';" />
                 <img src="https://raw.githubusercontent.com/iamrupam0123-ui/Shaldanga-Boroma/main/images/IMG-20251119-WA0009.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/b91c1c/ffffff?text=Image+3';" />
@@ -181,7 +178,6 @@
             <h2 class="text-3xl font-bold text-red-800 mb-4">Connect With Us</h2>
             <p class="text-gray-700 mb-6">For any inquiries, collaborations, or information regarding the temple's activities, please reach out.</p>
 
-            <!-- *** FIX 2: Removed sm:flex-row to force stacking on ALL screen sizes *** -->
             <div class="flex flex-col justify-center gap-6">
                 <!-- Email Contact -->
                 <div class="bg-white p-4 rounded-lg shadow-md flex items-center justify-center sm:justify-start flex-1 transition duration-200 hover:bg-gray-50">
@@ -223,4 +219,3 @@
 </body>
 </html>
 
-    
